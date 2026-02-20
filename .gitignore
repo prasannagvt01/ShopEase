@@ -1,0 +1,34 @@
+# Java
+target/
+*.class
+*.jar
+*.war
+*.ear
+.mvn/
+.metadata/
+bin/
+tmp/
+*.log
+
+# Node
+node_modules/
+dist/
+.env
+.env.local
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Logs
+backend/backend_new.log
+backend/backend_err.log
+backend/*.log
+
+# Test files
+backend/*.json
+!backend/pom.xml
+!backend/src/**

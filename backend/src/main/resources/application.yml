@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: ecommerce-backend
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/ecommerce}
+      database: ecommerce
+  mail:
+    host: smtp.gmail.com
+    port: 465
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.trust: smtp.gmail.com
+      mail.smtp.ssl.protocols: TLSv1.2
+
+server:
+  port: ${PORT:8080}
+
+jwt:
+  secret: ${JWT_SECRET:}
+  expiration: 86400000 # 24 hours in milliseconds
+
+cors:
+  allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
+
+logging:
+  level:
+    com.ecommerce: DEBUG
+    org.springframework.security: DEBUG
+# Razorpay Configuration
+razorpay:
+  key:
+    id: ${RAZORPAY_KEY_ID:}
+    secret: ${RAZORPAY_KEY_SECRET:}
+
+app:
+  store:
+    name: "Sales Savvy"
